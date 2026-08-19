@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Measurement & Analytics | E-Commerce Case Study</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: #263247;
+      background: #f3f5f8;
+    }
+
+    .hero {
+      background: #111827;
+      color: #ffffff;
+      padding: 90px 8% 85px;
+    }
+
+    .eyebrow {
+      color: #a9baff;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 1.05;
+      max-width: 900px;
+      margin-bottom: 28px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      font-size: 20px;
+      color: #d5d9e2;
+    }
+
+    main {
+      width: min(1100px, 88%);
+      margin: 55px auto 90px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 42px;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 30px rgba(17, 24, 39, 0.07);
+    }
+
+    h2 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin-bottom: 22px;
+      color: #202b3d;
+    }
+
+    h3 {
+      font-size: 21px;
+      margin: 26px 0 10px;
+      color: #27344a;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    ul, ol {
+      padding-left: 24px;
+      margin: 12px 0;
+    }
+
+    li {
+      margin: 9px 0;
+    }
+
+    .intro-grid,
+    .kpi-grid,
+    .decision-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .metric {
+      border: 1px solid #e3e7ee;
+      border-radius: 14px;
+      padding: 24px;
+      background: #fafbfc;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #202b3d;
+    }
+
+    .metric span {
+      font-size: 14px;
+      color: #596579;
+    }
+
+    .funnel {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .funnel div {
+      background: #eef1f7;
+      border-radius: 12px;
+      padding: 20px 12px;
+      text-align: center;
+      font-weight: 700;
+      color: #29364c;
+    }
+
+    .formula {
+      background: #111827;
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 12px 0 20px;
+      font-family: "Courier New", monospace;
+      overflow-x: auto;
+    }
+
+    .callout {
+      border-left: 5px solid #7b8cff;
+      background: #f0f2ff;
+      padding: 22px 24px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #eef1f7;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 18px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 680px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 15px;
+      border-bottom: 1px solid #e3e7ee;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f5f7fa;
+      color: #263247;
+    }
+
+    .footer {
+      text-align: center;
+      color: #697487;
+      font-size: 14px;
+      padding: 20px 0 60px;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        padding: 65px 7%;
+      }
+
+      main {
+        width: 92%;
+        margin-top: 35px;
+      }
+
+      .card {
+        padding: 28px;
+      }
+
+      .intro-grid,
+      .kpi-grid,
+      .decision-grid,
+      .funnel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero">
+    <div class="eyebrow">05 · Measurement & Analytics</div>
+    <h1>Measurement & Analytics Framework</h1>
+    <p>
+      Designing a measurement system that connects paid-media activity to
+      customer acquisition efficiency, profitability, and scalable growth.
+    </p>
+  </header>
+
+  <main>
+
+    <section class="card">
+      <div class="status">Planning stage · No campaign data yet</div>
+      <h2>Business Context</h2>
+      <p>
+        This measurement framework was designed for the Hoigi Moisturizing Skin Cream
+        ecommerce case study. The goal is to establish how marketing performance will
+        be measured before campaign data is available.
+      </p>
+      <div class="intro-grid">
+        <div class="metric">
+          <strong>Product</strong>
+          <span>Hoigi Moisturizing Skin Cream</span>
+        </div>
+        <div class="metric">
+          <strong>Primary conversion</strong>
+          <span>Completed purchase</span>
+        </div>
+        <div class="metric">
+          <strong>Core objective</strong>
+          <span>Evaluate acquisition efficiency and profitability</span>
+        </div>
+        <div class="metric">
+          <strong>Decision principle</strong>
+          <span>Connect marketing metrics to business outcomes</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Measurement Objective</h2>
+      <p>
+        The objective is to create a consistent framework for evaluating marketing
+        performance, customer acquisition efficiency, profitability, and scalability.
+      </p>
+      <p>
+        Individual metrics should not be evaluated in isolation. A strong measurement
+        system should show how traffic and advertising activity ultimately influence
+        purchases, acquisition cost, revenue, and contribution margin.
+      </p>
+
+      <div class="callout">
+        <strong>Analytical principle:</strong>
+        The purpose of measurement is not simply to report numbers. It is to turn
+        performance data into better marketing and budget decisions.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Measurement Funnel</h2>
+      <p>
+        The framework follows the customer journey from media exposure through
+        business outcome.
+      </p>
+
+      <div class="funnel">
+        <div>Impressions</div>
+        <div>Clicks</div>
+        <div>Sessions</div>
+        <div>Purchases</div>
+        <div>Profitability</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Key Performance Indicators</h2>
+
+      <div class="kpi-grid">
+        <div class="metric">
+          <strong>Impressions</strong>
+          <span>Measures ad exposure and reach. Useful for understanding delivery, but does not indicate engagement or purchase intent.</span>
+        </div>
+
+        <div class="metric">
+          <strong>Click-Through Rate (CTR)</strong>
+          <span>Measures the percentage of impressions that result in clicks and helps evaluate creative and audience relevance.</span>
+        </div>
+
+        <div class="metric">
+          <strong>Cost per Click (CPC)</strong>
+          <span>Measures the average cost of generating a click and helps assess traffic acquisition efficiency.</span>
+        </div>
+
+        <div class="metric">
+          <strong>Conversion Rate</strong>
+          <span>Measures the percentage of relevant visits that result in the primary conversion: a completed purchase.</span>
+        </div>
+
+        <div class="metric">
+          <strong>Customer Acquisition Cost (CAC)</strong>
+          <span>Measures the acquisition cost required to generate a customer and connects media spend to customer economics.</span>
+        </div>
+
+        <div class="metric">
+          <strong>Return on Ad Spend (ROAS)</strong>
+          <span>Measures attributed revenue relative to advertising spend. Useful for comparing campaign efficiency, but should not be treated as profit.</span>
+        </div>
+
+        <div class="metric">
+          <strong>Contribution Margin</strong>
+          <span>Evaluates the economics remaining after relevant variable costs and acquisition costs.</span>
+        </div>
+
+        <div class="metric">
+          <strong>Customer Lifetime Value (LTV)</strong>
+          <span>Provides a longer-term view of customer value as sufficient repeat-purchase data becomes available.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Core Calculations</h2>
+
+      <h3>Click-Through Rate</h3>
+      <div class="formula">CTR = Clicks ÷ Impressions × 100</div>
+
+      <h3>Conversion Rate</h3>
+      <div class="formula">Conversion Rate = Purchases ÷ Relevant Sessions × 100</div>
+
+      <h3>Customer Acquisition Cost</h3>
+      <div class="formula">CAC = Acquisition Spend ÷ New Customers</div>
+
+      <h3>Return on Ad Spend</h3>
+      <div class="formula">ROAS = Attributed Revenue ÷ Advertising Spend</div>
+
+      <p>
+        These calculations provide consistent definitions for reporting and make
+        channel-level comparisons more reliable.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Measurement Architecture</h2>
+      <p>
+        The measurement system should connect advertising platforms, website behavior,
+        ecommerce conversions, and reporting into one analytical workflow.
+      </p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Layer</th>
+              <th>Purpose</th>
+              <th>Examples</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ad platforms</td>
+              <td>Measure media delivery and spend.</td>
+              <td>Impressions, clicks, CPC, spend</td>
+            </tr>
+            <tr>
+              <td>Website analytics</td>
+              <td>Measure user behavior after the click.</td>
+              <td>Sessions, engagement, landing-page behavior</td>
+            </tr>
+            <tr>
+              <td>Ecommerce</td>
+              <td>Measure business conversions.</td>
+              <td>Purchases, revenue, customer data</td>
+            </tr>
+            <tr>
+              <td>Reporting</td>
+              <td>Combine performance data for decision making.</td>
+              <td>Channel performance, CAC, ROAS, margin</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Campaign & UTM Tracking</h2>
+      <p>
+        Campaign links should use a consistent naming convention so traffic can be
+        grouped and analyzed by source, medium, campaign, and creative.
+      </p>
+
+      <div class="formula">
+utm_source = platform<br>
+utm_medium = paid_social / paid_search<br>
+utm_campaign = campaign_name<br>
+utm_content = creative_or_ad_variant
+      </div>
+
+      <p>
+        Consistent tracking reduces ambiguity when comparing acquisition channels
+        and helps connect campaign traffic to downstream website and purchase behavior.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Attribution Approach</h2>
+      <p>
+        Attribution should be treated as a measurement model rather than a perfect
+        representation of causality. Different platforms may report conversions
+        differently because they use different attribution windows and rules.
+      </p>
+
+      <h3>Initial approach</h3>
+      <ul>
+        <li>Track the purchase event consistently.</li>
+        <li>Use campaign and UTM data to identify acquisition sources.</li>
+        <li>Compare platform-reported conversions with analytics and ecommerce data.</li>
+        <li>Investigate differences instead of assuming every reported conversion is incremental.</li>
+      </ul>
+
+      <h3>Incrementality</h3>
+      <p>
+        Where practical, incremental testing should be used to determine whether
+        additional advertising spend actually creates additional demand rather than
+        simply receiving credit for conversions that may have happened anyway.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Decision Framework</h2>
+
+      <div class="decision-grid">
+        <div class="metric">
+          <strong>Scale</strong>
+          <span>If acquisition efficiency remains healthy and contribution margin supports additional spend, consider increasing budget gradually.</span>
+        </div>
+
+        <div class="metric">
+          <strong>Optimize</strong>
+          <span>If traffic is strong but conversion efficiency is weak, investigate targeting, creative, landing-page experience, or offer alignment.</span>
+        </div>
+
+        <div class="metric">
+          <strong>Restrict</strong>
+          <span>If marginal CAC rises materially as spend increases, the channel may be approaching saturation.</span>
+        </div>
+
+        <div class="metric">
+          <strong>Investigate</strong>
+          <span>If platform reporting and business outcomes disagree, investigate tracking, attribution, and incrementality before reallocating budget.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Measurement Priorities</h2>
+      <ol>
+        <li>Track purchases accurately.</li>
+        <li>Measure CTR and CPC by channel.</li>
+        <li>Measure website conversion rate.</li>
+        <li>Calculate CAC by channel.</li>
+        <li>Calculate attributed ROAS.</li>
+        <li>Evaluate contribution margin after acquisition costs.</li>
+        <li>Analyze customer journeys and attribution.</li>
+        <li>Evaluate incrementality where practical.</li>
+        <li>Monitor marginal CAC and marginal ROAS during budget increases.</li>
+        <li>Evaluate LTV as sufficient customer data becomes available.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Current Status & Next Steps</h2>
+      <p>
+        The measurement framework has been defined as an initial analytical plan.
+        Actual campaign data is not yet available, so this case study intentionally
+        does not present fabricated performance results.
+      </p>
+
+      <div class="callout">
+        <strong>Next analytical phase:</strong>
+        Once campaigns generate sufficient data, the framework can be used to compare
+        channels, diagnose funnel performance, evaluate acquisition economics, and
+        guide budget allocation.
+      </div>
+
+      <h3>What I would analyze after launch</h3>
+      <ul>
+        <li>Channel-level CAC and ROAS</li>
+        <li>Creative and audience performance</li>
+        <li>Landing-page and website conversion rate</li>
+        <li>Marginal CAC as budgets increase</li>
+        <li>Contribution margin after acquisition costs</li>
+        <li>Attribution differences across platforms and analytics</li>
+        <li>Early signals of repeat purchase and LTV</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <div class="footer">
+    E-Commerce & Digital Marketing Case Study · Measurement & Analytics
+  </div>
+
+</body>
+</html>
