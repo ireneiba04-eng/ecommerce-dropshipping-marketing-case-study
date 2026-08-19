@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CRO & Experimentation | E-Commerce Case Study</title>
+
+<style>
+
+* {
+
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+body {
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  line-height: 1.7;
+
+  color: #263247;
+
+  background: #f3f5f8;
+
+}
+
+.hero {
+
+  background: #111827;
+
+  color: #ffffff;
+
+  padding: 90px 8% 85px;
+
+}
+
+.hero .eyebrow {
+
+  color: #a9baff;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 28px;
+
+  text-transform: uppercase;
+
+}
+
+.hero h1 {
+
+  font-size: clamp(42px, 7vw, 76px);
+
+  line-height: 1.05;
+
+  max-width: 950px;
+
+  margin-bottom: 28px;
+
+}
+
+.hero p {
+
+  color: #d4d9e4;
+
+  font-size: 20px;
+
+  max-width: 850px;
+
+}
+
+main {
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  padding: 58px 28px 80px;
+
+}
+
+.card {
+
+  background: #ffffff;
+
+  border: 1px solid #e1e6ed;
+
+  border-radius: 18px;
+
+  padding: 38px;
+
+  margin-bottom: 28px;
+
+  box-shadow: 0 12px 35px rgba(17, 24, 39, 0.05);
+
+}
+
+.badge {
+
+  display: inline-block;
+
+  background: #eef2f8;
+
+  color: #33415c;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  margin-bottom: 18px;
+
+}
+
+h2 {
+
+  font-size: 32px;
+
+  line-height: 1.2;
+
+  margin-bottom: 20px;
+
+  color: #243047;
+
+}
+
+h3 {
+
+  font-size: 21px;
+
+  margin: 28px 0 10px;
+
+  color: #263247;
+
+}
+
+p {
+
+  margin-bottom: 16px;
+
+}
+
+.grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+
+  margin-top: 24px;
+
+}
+
+.metric {
+
+  background: #f8fafc;
+
+  border: 1px solid #e1e6ed;
+
+  border-radius: 14px;
+
+  padding: 24px;
+
+}
+
+.metric strong {
+
+  display: block;
+
+  font-size: 14px;
+
+  color: #68758a;
+
+  margin-bottom: 8px;
+
+}
+
+.metric span {
+
+  font-size: 28px;
+
+  font-weight: 700;
+
+  color: #243047;
+
+}
+
+.highlight {
+
+  background: #eef3ff;
+
+  border-left: 4px solid #7186d9;
+
+  padding: 22px 24px;
+
+  border-radius: 10px;
+
+  margin: 22px 0;
+
+}
+
+.result-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin: 24px 0;
+
+}
+
+.result {
+
+  text-align: center;
+
+  background: #f8fafc;
+
+  border: 1px solid #e1e6ed;
+
+  border-radius: 14px;
+
+  padding: 25px 15px;
+
+}
+
+.result .number {
+
+  font-size: 34px;
+
+  font-weight: 700;
+
+  color: #263247;
+
+  display: block;
+
+  margin-bottom: 5px;
+
+}
+
+.result .label {
+
+  font-size: 14px;
+
+  color: #68758a;
+
+}
+
+table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin-top: 22px;
+
+  overflow: hidden;
+
+}
+
+th,
+
+td {
+
+  padding: 15px;
+
+  text-align: left;
+
+  border-bottom: 1px solid #e1e6ed;
+
+}
+
+th {
+
+  background: #f3f5f8;
+
+  color: #263247;
+
+}
+
+ul,
+
+ol {
+
+  padding-left: 24px;
+
+}
+
+li {
+
+  margin-bottom: 10px;
+
+}
+
+.footer {
+
+  text-align: center;
+
+  color: #6d788b;
+
+  font-size: 14px;
+
+  padding: 35px 20px 55px;
+
+}
+
+@media (max-width: 760px) {
+
+  .hero {
+
+    padding: 65px 7% 60px;
+
+  }
+
+  .hero h1 {
+
+    font-size: 46px;
+
+  }
+
+  main {
+
+    padding: 35px 18px 55px;
+
+  }
+
+  .card {
+
+    padding: 26px;
+
+  }
+
+  .grid,
+
+  .result-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  table {
+
+    font-size: 14px;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="hero">
+
+  <div class="eyebrow">06 · CRO & Experimentation</div>
+
+  <h1>Conversion Rate Optimization & Experimentation</h1>
+
+  <p>
+
+    Identifying conversion friction, designing structured experiments,
+
+    and evaluating whether landing-page improvements can translate into
+
+    stronger ecommerce performance.
+
+  </p>
+
+</header>
+
+<main>
+
+<section class="card">
+
+  <span class="badge">Planning & Testing Framework</span>
+
+  <h2>Business Context</h2>
+
+  <p>
+
+    This CRO analysis was designed for the Hoigi Moisturizing Skin Cream
+
+    ecommerce case study. The objective is to identify opportunities to
+
+    reduce conversion friction and improve the percentage of visitors
+
+    who complete a purchase.
+
+  </p>
+
+  <div class="grid">
+
+    <div class="metric">
+
+      <strong>Product</strong>
+
+      <span>Hoigi Moisturizing Skin Cream</span>
+
+    </div>
+
+    <div class="metric">
+
+      <strong>Primary Conversion</strong>
+
+      <span>Completed Purchase</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="card">
+
+  <h2>Initial Conversion Problem</h2>
+
+  <p>
+
+    The starting scenario assumes that the landing page receives
+
+    1,000 visitors and generates 50 purchases.
+
+  </p>
+
+  <div class="highlight">
+
+    <strong>Initial conversion rate:</strong><br>
+
+    50 purchases ÷ 1,000 visitors × 100 = <strong>5%</strong>
+
+  </div>
+
+  <h3>Potential Sources of Conversion Friction</h3>
+
+  <ul>
+
+    <li>Unclear product value proposition</li>
+
+    <li>Insufficient price visibility</li>
+
+    <li>Lack of perceived product relevance</li>
+
+    <li>Insufficient offer or savings information</li>
+
+  </ul>
+
+</section>
+
+<section class="card">
+
+  <h2>Experiment Design</h2>
+
+  <p>
+
+    A structured A/B test was used to compare the existing landing-page
+
+    experience against an improved version.
+
+  </p>
+
+  <div class="grid">
+
+    <div class="metric">
+
+      <strong>Version A</strong>
+
+      <span>Original experience</span>
+
+    </div>
+
+    <div class="metric">
+
+      <strong>Version B</strong>
+
+      <span>Improved experience</span>
+
+    </div>
+
+  </div>
+
+  <h3>Experiment Objective</h3>
+
+  <p>
+
+    Determine whether the improved landing-page experience produces a
+
+    higher observed purchase conversion rate than the original version.
+
+  </p>
+
+  <h3>Key Measurement</h3>
+
+  <p>
+
+    Purchase conversion rate is the primary success metric because the
+
+    business objective is to increase completed purchases rather than
+
+    optimize engagement in isolation.
+
+  </p>
+
+</section>
+
+<section class="card">
+
+  <h2>Test Results</h2>
+
+  <p>
+
+    The observed test results show a higher purchase conversion rate
+
+    for Version B.
+
+  </p>
+
+  <div class="result-grid">
+
+    <div class="result">
+
+      <span class="number">1,000</span>
+
+      <span class="label">Visitors · Version A</span>
+
+    </div>
+
+    <div class="result">
+
+      <span class="number">1,000</span>
+
+      <span class="label">Visitors · Version B</span>
+
+    </div>
+
+    <div class="result">
+
+      <span class="number">5% → 6.5%</span>
+
+      <span class="label">Conversion Rate</span>
+
+    </div>
+
+  </div>
+
+  <table>
+
+    <thead>
+
+      <tr>
+
+        <th>Metric</th>
+
+        <th>Version A</th>
+
+        <th>Version B</th>
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+
+      <tr>
+
+        <td>Visitors</td>
+
+        <td>1,000</td>
+
+        <td>1,000</td>
+
+      </tr>
+
+      <tr>
+
+        <td>Purchases</td>
+
+        <td>50</td>
+
+        <td>65</td>
+
+      </tr>
+
+      <tr>
+
+        <td>Conversion Rate</td>
+
+        <td>5%</td>
+
+        <td>6.5%</td>
+
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</section>
+
+<section class="card">
+
+  <h2>Experiment Analysis</h2>
+
+  <h3>Absolute Improvement</h3>
+
+  <p>
+
+    6.5% − 5% = <strong>1.5 percentage points</strong>
+
+  </p>
+
+  <h3>Relative Improvement</h3>
+
+  <p>
+
+    (6.5% − 5%) ÷ 5% × 100 = <strong>30%</strong>
+
+  </p>
+
+  <div class="highlight">
+
+    Version B produced a <strong>1.5 percentage-point increase</strong>
+
+    in observed conversion rate, representing a
+
+    <strong>30% relative improvement</strong> over Version A.
+
+  </div>
+
+</section>
+
+<section class="card">
+
+  <h2>Initial Decision</h2>
+
+  <p>
+
+    Version B is the initial winner based on the observed purchase
+
+    conversion rate.
+
+  </p>
+
+  <p>
+
+    However, the result should not automatically be treated as
+
+    conclusive. A responsible CRO decision requires additional
+
+    validation before permanently rolling out the variant.
+
+  </p>
+
+  <h3>Why Further Validation Matters</h3>
+
+  <ul>
+
+    <li>Confirm that the sample size is sufficient.</li>
+
+    <li>Evaluate statistical significance.</li>
+
+    <li>Confirm traffic was appropriately allocated.</li>
+
+    <li>Check for external factors that could influence results.</li>
+
+    <li>Verify that the improvement persists over time.</li>
+
+  </ul>
+
+</section>
+
+<section class="card">
+
+  <h2>Next Steps</h2>
+
+  <ol>
+
+    <li>Validate the experiment with sufficient sample size.</li>
+
+    <li>Confirm that traffic is evenly and appropriately allocated between variants.</li>
+
+    <li>Monitor add-to-cart and checkout initiation rates.</li>
+
+    <li>Evaluate whether conversion improvement translates into improved CAC and contribution margin.</li>
+
+    <li>Continue testing other potential sources of conversion friction.</li>
+
+  </ol>
+
+  <div class="highlight">
+
+    <strong>Optimization principle:</strong>
+
+    CRO should not stop after finding a winning variant. The goal is to
+
+    build a repeatable experimentation process that connects conversion
+
+    improvements to broader business outcomes.
+
+  </div>
+
+</section>
+
+<section class="card">
+
+  <h2>What I Would Analyze Next</h2>
+
+  <ul>
+
+    <li>Landing-page engagement and drop-off points</li>
+
+    <li>Add-to-cart and checkout initiation rates</li>
+
+    <li>Conversion rate by traffic source</li>
+
+    <li>Conversion rate by device</li>
+
+    <li>Customer acquisition cost before and after the change</li>
+
+    <li>Contribution margin impact</li>
+
+    <li>Repeat purchase behavior</li>
+
+    <li>Additional landing-page experiments</li>
+
+  </ul>
+
+</section>
+
+<section class="card">
+
+  <span class="badge">Case Study Status</span>
+
+  <h2>Current Status & Next Phase</h2>
+
+  <p>
+
+    The CRO framework and initial A/B test analysis have been defined.
+
+    The observed test results indicate that Version B outperformed
+
+    Version A on purchase conversion rate.
+
+  </p>
+
+  <p>
+
+    The next analytical phase would be to validate the result with
+
+    sufficient data and determine whether the conversion improvement
+
+    produces a meaningful improvement in acquisition efficiency and
+
+    profitability.
+
+  </p>
+
+</section>
+
+</main>
+
+<div class="footer">
+
+  E-Commerce & Digital Marketing Case Study · CRO & Experimentation
+
+</div>
+
+</body>
+
+</html>
